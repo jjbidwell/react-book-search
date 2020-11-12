@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Searchresults from "./componenents/Searchresults/searchresults"
 import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
 
 function App() {
@@ -7,7 +8,7 @@ function App() {
     <BrowserRouter>
     <Switch>
     <Route exact path="/search">
-      <h1>Search</h1>
+      <Searchresults/>
     </Route>
     <Route exact path="/">
       <Redirect to="/search"/>
