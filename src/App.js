@@ -1,24 +1,27 @@
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+    <Switch>
+    <Route exact path="/search">
+      <h1>Search</h1>
+    </Route>
+    <Route exact path="/">
+      <Redirect to="/search"/>
+    </Route>
+    <Route exact path="/saved">
+      <h1>Saved</h1>
+    </Route>
+    <Route path="*">
+      <h1>you fool. you absolute buffoon. you think you can challenge me in my own realm? you think you can rebel against my authority? you dare come into my house and upturn my dining chairs and spill coffee grounds in my Keurig? you thought you were safe in your chain mail armor behind that screen of yours. I will take these laminate wood floor boards and destroy you. I didn’t want war. but i didn’t start it.</h1>
+    </Route>
+    </Switch>
+
+    </BrowserRouter>
   );
 }
 
