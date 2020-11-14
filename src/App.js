@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Search from "./componenents/Search/Search"
+import "bootstrap/dist/css/bootstrap.css"
 import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
 
 function App() {
