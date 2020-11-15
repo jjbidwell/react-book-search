@@ -17,7 +17,9 @@ class Search extends React.Component {
             API.getBook(this.state.search).then(results => {
                 const array = [];
                 for (let i = 0; i < results.data.items.length; i++){
+                    if(results.data.items[i].volumeInfo.imageLinks){
                     array.push(results.data.items[i]);
+                    }
                     this.setState({
                         search: this.search,
                         results: array

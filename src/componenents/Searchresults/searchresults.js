@@ -3,7 +3,7 @@ import "../Searchresults/searchresults.css"
 
 
 function Searchresults (props) {
-        if(props.results.length===10) {    
+        if(props.results.length>0) {    
             return (
                 <div>
                     <h1>Results:</h1>
@@ -26,9 +26,6 @@ function Searchresults (props) {
                 <div></div>
             )
         }
-    
-    console.log(props.results);
-
 }
 
 export default Searchresults;
