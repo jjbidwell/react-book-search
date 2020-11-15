@@ -1,6 +1,10 @@
 import React from "react";
 import "../Searchresults/searchresults.css"
+import API from "../../utils/API";
 
+function save (){
+    API.saveFavorite();
+}
 
 function Searchresults (props) {
         if(props.results.length>0) {    
@@ -14,7 +18,7 @@ function Searchresults (props) {
                                     <img className="thumbnail" alt={element.volumeInfo.title} src={element.volumeInfo.imageLinks.thumbnail}/>
                                     <h5 className="card-title">{element.volumeInfo.title}</h5>
                                     <p className="card-text">By {element.volumeInfo.authors} </p>
-                                    <button className="btn btn-primary save-btn">Save to favorites</button>
+                                    <button onClick={save()} data-index={index} className="btn btn-primary save-btn">Save to favorites</button>
                                 </div>
                             </div>
                 
